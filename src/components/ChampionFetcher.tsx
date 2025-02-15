@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Champion } from '../interfaces/Champions.ts';
 import Display from "../components/Display.tsx";
+import styled from "styled-components";
+
+const ParentDiv = styled.div`
+    width: 80vw;
+    margin: auto;
+`;
 
 export default function ChampionFetcher() {
   // useState hook that manages state of component
@@ -41,15 +47,13 @@ export default function ChampionFetcher() {
     fetchData()
       .then(() => console.log("Data feteced, no error"))
       .catch((e: Error) => console.log("error" + e))
-  }, [data.length]);
-  // if data's length changes add new result
+    }, [data.length]);
+    // if data's length changes add new result
 
     // renders UI
     return (
-      <>
-        {
-          <Display data={data}/>
-        }
-      </>
+      <ParentDiv>
+        <Display data={data}/>
+      </ParentDiv>
     )
 }
