@@ -1,6 +1,7 @@
 //displays champion information
 
-import {Champion} from "../interfaces/Champions.ts"
+import {Champion} from "../interfaces/Champions.ts";
+import styled from "styled-components";
 
 // single tag is xml ends with />
 export default function Display(props : { data:Champion[] }) {
