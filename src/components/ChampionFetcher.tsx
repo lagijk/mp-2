@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { Champion } from '../interfaces/Champions.ts';
 import Display from "../components/Display.tsx";
 import styled from "styled-components";
